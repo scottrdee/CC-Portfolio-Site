@@ -1,0 +1,469 @@
+/* Color Group 
+#167A0C - bright green
+#000000 - black
+#0C2E09 - medium green
+#1C1815 - gray - background color
+#7A3000 - dull rust
+*/
+
+html {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* May need to remove scroll behavior if I move the transitions into the JS. Currently, it's slowing down too much */
+}
+
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: hsl(0, 80%, 90%);
+    transition: background-color 0.8s ease-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+a {
+    color: #000000;
+    font-weight: 700;
+    transition: color 0.5s linear;
+}
+
+a:hover {
+    color: #1b7913;
+}
+
+/* Menu Bar */
+header {
+    z-index: 4;
+}
+
+.page-navigation-narrow {
+    position: fixed;
+    display: block;
+    top: 10px;
+    right: 10px;
+    color: #167A0C;
+}
+
+.page-navigation-narrow p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.page-navigation-narrow a {
+    position: relative;
+    display: block;
+    left: 200px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: left 0.7s ease-out;
+}
+
+.page-navigation-wide {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .page-navigation-narrow {
+        display: none;
+    }
+    
+    .page-navigation-wide {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        margin: auto;
+        width: 120px;
+    }
+    
+    .page-navigation-wide a {
+        display: block;
+        text-align: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-right: 10px;
+        margin-left: 5px;
+        
+    }
+}
+
+/* Arrow controls */
+/* Will fix these later - may need to take imgs out of div */
+
+.arrow-controls {
+    position: fixed;
+    display: block;
+    bottom: 5px;
+    right: 10px;
+}
+
+.arrow-controls img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+#previous-arrow {
+    bottom: 5px;
+    left: 10px;
+}
+
+#next-arrow {
+    bottom: 5px;
+    right: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    .arrow-controls {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 60px;
+        top: 42vh;
+        left: 10px;
+    }
+}
+
+/* when panel is 'on display', change that menu line to orange color */
+
+
+/* Panel General */
+
+.display-panel {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-contents {
+    width: 500px;
+}
+
+/* Panel particulars */
+
+#page-one .panel-contents {
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 10px hsla(0, 0%, 10%, 0.1);
+    background-color: hsla(0, 0%, 90%, 0.3);
+}
+
+#page-one h1 {
+    text-align: center;
+}
+
+#page-one p {
+    text-indent: 3rem;
+}
+
+#page-one figure {
+    width: 250px;
+    height: auto;
+    margin: auto;
+}
+
+#page-one img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+}
+
+#page-one figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#page-two h2 {
+    text-align: center;
+}
+
+#page-two .panel-contents {
+    padding: 15px 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 10px hsla(0, 0%, 10%, 0.1);
+    background-color: hsla(120, 10%, 80%, 0.3);
+}
+
+#page-two div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#page-two a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100px;
+    text-decoration: none;
+}
+
+#page-two img {
+    width: 50px;
+    height: auto; 
+    object-fit: contain;
+}
+
+#page-three .panel-contents {
+    padding: 15px 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 10px hsla(0, 0%, 10%, 0.1);
+    background-color: hsla(120, 10%, 80%, 0.3);
+}
+
+#page-three h2 {
+    text-align: center;
+}
+
+.code-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.code-lang {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+#page-three img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: auto;
+}
+
+#page-four .panel-contents {
+    padding: 15px 15px 20px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 10px hsla(0, 0%, 10%, 0.1);
+    background-color: hsla(80, 10%, 88%, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-four h2 {
+    text-align: center;
+}
+
+.control-buttons {
+    position: fixed;
+    top: 10px;
+    left: 45px;
+    right: unset;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 170px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.control-buttons img {
+    object-fit: fill;
+    height: 50px;
+    width: auto;
+}
+
+#play-button {
+    display: none;
+}
+
+.div-code-blocks {
+    width: 95%;
+    border: 1px solid hsla(0, 0%, 50%, 0.3);
+    border-radius: 25px;
+    padding: 10px;
+    background-color: hsla(0, 0%, 95%, 0.5);
+}
+
+
+.code-block:nth-child(1) {
+    opacity: 1; 
+    display: block;
+}
+
+.code-block:not(:first-child) {
+    display: none;
+    opacity: 1;
+}
+
+#hr-timer {
+    border-bottom: 1px solid hsla(205, 62%, 60%, 0.3);
+    width: 100%;
+    margin: 5px auto;
+}
+
+.code-block img {
+    width: 95%;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px 2.5%;
+    border-radius: 25px;
+    transition: border-radius 0.5s;
+}
+
+.code-block img:hover {
+    border-radius: 0px;
+}
+
+.code-block h3 {
+    text-align: center;
+}
+
+.code-block em {
+    color: hsl(0, 80%, 20%);
+    font-size: 1rem;
+}
+
+.code-section-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.code-block a {
+    text-align: right;
+}
+
+#page-five h2 {
+    text-align: center;
+}
+
+#page-five .panel-contents {
+    padding: 15px 15px 20px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 10px hsla(0, 0%, 10%, 0.1);
+    background-color: hsla(160, 10%, 88%, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-five form {
+    width: 90%;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: hsla(0, 0%, 95%, 0.5);
+    border: 1px solid hsla(0, 0%, 50%, 0.3);
+    display: unset;
+}
+
+#submit-button {
+    display: unset;
+}
+
+#reset-button {
+    display: none;
+}
+
+#page-five input {
+    margin: 10px;
+}
+
+#form-data {
+    display: none;
+    width: 90%;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: hsla(0, 0%, 95%, 0.5);
+    border: 1px solid hsla(0, 0%, 50%, 0.3);
+}
+
+/* Settings for full screen - all panels, same breakpoint */
+@media screen and (min-width: 675px) {
+    .panel-contents {
+        width: 600px;
+    }
+
+    #page-one .panel-contents {
+        padding: 25px;
+    }
+
+    #page-one p {
+        text-indent: 5rem;
+    }
+
+    #page-two .panel-contents {
+        padding: 25px 25px 40px;
+    }
+
+    #page-two img {
+        width: 60px;
+    }
+
+    #page-three .panel-contents {
+        padding: 25px 25px 60px;
+    }
+
+    .code-lang {
+        width: 100px;
+        height: 100px;
+    }
+
+    #page-three img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #page-four .panel-contents {
+        padding: 25px 25px 40px;
+    }
+
+    .control-buttons {
+        top: 10px;
+        left: unset;
+        right: 45px;
+    }
+
+    .div-code-blocks {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .code-block img {
+        height: 200px;
+    }
+
+    #page-five .panel-contents {
+        padding: 25px 25px 40px;
+    }
+}

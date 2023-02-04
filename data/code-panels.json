@@ -1,0 +1,31 @@
+{"code":[
+    {
+    "type":"module",
+    "name":"Node Creator",
+    "lang":"JS",
+    "function":"This JS file is meant to be loaded as a module. It provides a small batch of functions that make HTML element creation a breeze.",
+    "link":"https://github.com/scottrdee/module-node-creator",
+    "linkname":"GitHub",
+    "img":"./images/node-creator.png",
+    "imgalt":"Module Code screenshot"
+    },{
+    "type":"web app",
+    "name":"Scope Simulator",
+    "lang":"JS, HTML, CSS",
+    "function":"A browser-based 'simulator', meant to function as a teaching tool for new optics users.",
+    "link":"https://github.com/scottrdee/scope-simulator",
+    "linkname":"GitHub",
+    "img":"./images/simulator.jpg",
+    "imgalt":"Scope Simulator start screen"
+    }, {
+    "type":"website",
+    "name":"This Website",
+    "lang":"JS, HTML, CSS",
+    "function":"This website is built around the core three web languages, and features a mix of interactivity and design.",
+    "link":"https://github.com/scottrdee/Portfolio-Site",
+    "linkname":"GitHub",
+    "img":"./images/website-shot.png",
+    "imgalt":"A screenshot of this website"
+    }
+    ]
+}

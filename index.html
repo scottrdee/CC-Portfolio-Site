@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Scott Dee's Portfolio</title>
+        <link href="./styles/style.css" rel="stylesheet">
+        <script src="./scripts/script.js" defer></script>
+        <script src="./scripts/home-scroll.js" type="module"></script>
+    </head>
+
+    <body>
+        <header> <!-- Page Header and Navigation -->
+            <nav class="page-navigation-wide">
+                <a href="#page-one" class="normal-menu-button">About</a>
+                <a href="#page-two" class="normal-menu-button">Accounts</a>
+                <a href="#page-three" class="normal-menu-button">Languages</a>
+                <a href="#page-four" class="normal-menu-button">Examples</a>
+                <a href="#page-five" class="normal-menu-button">Contact</a>
+            </nav>
+
+            <nav class="page-navigation-narrow">
+                <p class="narrow-nav-menu-button">Menu</p>
+                <a href="#page-one" class="hidden-menu-button">About</a> 
+                <a href="#page-two" class="hidden-menu-button">Accounts</a>
+                <a href="#page-three" class="hidden-menu-button">Languages</a> 
+                <a href="#page-four" class="hidden-menu-button">Examples</a>
+                <a href="#page-five" class="hidden-menu-button">Contact</a>
+            </nav>
+
+            <div class="arrow-controls">
+                <img src="./images/left-arrow.png" alt="Previous" id="previous-arrow" onclick="changePage('previous')">
+                <img src="./images/right-arrow.png" alt="Next" id="next-arrow" onclick="changePage('next')">
+            </div>
+        </header>
+
+        <main>
+
+            <!-- Structure - each panel is one page tall. Background color shifts (transition) as the page is scrolled down. Chakra colors? But not enough pages... -->
+            <!-- Dark BG with light accents? I feel like soft BG with dark color is best -->
+
+            
+            <!-- Next steps : Fill each panel. Customize each panel for mobile and desktop view. Set same breakpoints for each. Make it beautiful! -->
+            <section id="page-one" class="display-panel">
+                <div class="panel-contents">
+                    <h1>Scott Dee - Portfolio</h1>
+                    <div class="general-desc">
+                        <p>Hello, World! I'm a junior developer living in Southern California. I've thrived by diving headfirst into a problem and working it until it makes sense. I thrive on problems - and especially on the joy that comes from solving them. Welcome to my site. It will continue to grow.</p>
+                    </div>
+                    <figure class="photo-of-me">
+                        <img src="./images/Scott_Dee_photo.jpg" alt="Hello, it's me">
+                        <figcaption>Scott Dee</figcaption>
+                    </figure>
+                </div>
+                
+            </section>
+
+            <!-- Contact / Divider (small bar) -->
+            <section id="page-two" class="display-panel">
+                <section class="panel-contents">
+                    <h2>Accounts</h2>
+                    <div>
+                        <a href="https://www.linkedin.com/in/scott-dee-964072186/" title="My LinkedIn Profile" target="_blank"><img src="./images/LI-In-Bug.png" alt="LinkedIn Logo"><p>LinkedIn</p></a>
+                        <a href="https://github.com/scottrdee?tab=repositories" title="My GitHub Profile" target="_blank"><img src="./images/GitHub-Mark-32px.png" alt="Github Logo"><p>GitHub</p></a>
+                        <a href="hhttps://www.codewars.com/users/scottrdee" title="My CodeWars Profile" target="_blank"><img src="./images/codewards.svg" alt="CodeWars Logo"><p>CodeWars</p></a>
+                        <!-- Add any contact links here. Maybe one that creates a form popup or dropdown? -->
+                    </div>
+                </section>
+            </section>
+
+            <!-- Resume and History - a list of lists -->
+            <section class="display-panel" id="page-three">
+                <section class="panel-contents">
+                    <h2>Languages</h2>
+                    <div class="code-group">
+                        <div class="code-lang">
+                            <img src="./images/JS-icon.png" alt="JS Logo">
+                            <p>Javascript</p>
+                        </div>
+                        <div class="code-lang">
+                            <img src="./images/css-logo.png" alt="CSS Logo">
+                            <p>CSS3</p>
+                        </div>
+                        <div class="code-lang">
+                            <img src="./images/html-logo.png" alt="HTML Logo">
+                            <p>HTML5</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="display-panel" id="page-four">
+                <section class="panel-contents">
+                    <div class="control-buttons">
+                        <img src="./images/playbutton.png" alt="Play" id="play-button">
+                        <img src="./images/pausebutton.png" alt="Pause" id="pause-button">
+                        <img src="./images/leftarrow.png" alt="Back" id="left-arrow">
+                        <img src="./images/rightarrow.png" alt="Next" id="right-arrow">
+                    </div>
+                    <h2>Examples</h2>
+                    <hr id="hr-timer">
+                    <div class="div-code-blocks"> <!-- Original code for single panel
+                        <div class="code-block">
+                            <img src="./images/node-creator.png" alt="The First Program">
+                            <h3><em>Module</em> Node Creator</h3>
+                            <p><span class="code-section-title">Languages:</span> JS</p>
+                            <p><span class="code-section-title">Function:</span> This JS file is meant to be loaded as a module. It provides a small batch of functions that make HTML element creation a breeze.</p>
+                            <a href="https://github.com/scottrdee/module-node-creator">GitHub</a>
+                        </div> -->
+                    </div>
+                </section>
+            </section>
+
+
+            <section class="display-panel" id="page-five">
+                <section class="panel-contents">
+                    <h2>Contact</h2>
+                    <p>(This is just a test form. Nothing is actually being submitted)</p>
+                    <form>
+                        <input type="text" placeholder="Your Name" name="name" required><br>
+                        <input type="email" placeholder="email@website.com" name="email" required><br>
+                        <textarea placeholder="Message" rows="4" cols="20" name="text"></textarea><br> <!-- Need to fix text box size -->
+                    </form><br>
+                    <button onclick="swapView()" id="submit-button">Submit</button>
+                    <div id="form-data">
+                        <p id="name-field"></p>
+                        <p id="email-field"></p>
+                        <p id="text-field"></p>
+                    </div><br>
+                    <button onclick="swapBack()" id="reset-button">Reset</button>
+                    <p>You can send me an email at: <a href="mailto: scottrdee@gmail.com">ScottRDee@gmail.com</a></p>
+                </section>
+            </section>
+
+        </main>
+    </body>
+</html>
